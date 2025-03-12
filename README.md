@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# Vite React Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório é um template de projeto configurado com Vite para desenvolvimento moderno com React. Ele inclui TypeScript, Tailwind CSS, React Query, Prettier, ESLint, Lucide Icons e React Router Dom, proporcionando uma base sólida para iniciar novos projetos rapidamente.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Vite](https://vitejs.dev/) - Build tool rápida para frontend
+- [React](https://react.dev/) - Biblioteca para criação de interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript com tipagem estática
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário
+- [React Query](https://tanstack.com/query/v4/) - Gerenciamento de estado assíncrono
+- [Prettier](https://prettier.io/) - Formatação de código automática
+- [ESLint](https://eslint.org/) - Linter para manter boas práticas no código
+- [Lucide Icons](https://lucide.dev/) - Conjunto de ícones para React
+- [React Router Dom](https://reactrouter.com/) - Roteamento dinâmico para aplicações React
 
-## Expanding the ESLint configuration
+## 📦 Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone o repositório:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   ```sh
+   degit github:gui-alves-oliveira/vite-react-template app-name
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```sh
+   cd app-name
+   ```
+
+3. Instale as dependências:
+
+   ```sh
+   npm install
+   ```
+
+## 🔥 Uso
+
+Para iniciar o servidor de desenvolvimento:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O projeto será executado em `http://localhost:5173/` por padrão.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 Scripts Disponíveis
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- `dev`: Inicia o servidor de desenvolvimento
+- `build`: Compila o projeto para produção
+- `serve`: Serve a build localmente
+- `lint`: Roda o ESLint para verificar erros no código
+- `format`: Formata o código com Prettier
+
+## 🎨 Estrutura do Projeto
+
 ```
+/
+├── src/
+│   ├── components/   # Componentes reutilizáveis
+│   ├── app/          # Modulos da aplicação
+│   ├── hooks/        # Hooks customizados
+│   ├── router.tsx    # Configuração de rotas
+│   ├── http/         # Comunicação com API
+│   ├── styles/       # Estilos globais
+│   ├── main.tsx      # Ponto de entrada da aplicação
+├── public/           # Arquivos estáticos
+├── .eslintrc.json    # Configuração do ESLint
+├── .prettierrc       # Configuração do Prettier
+├── vite.config.ts    # Configuração do Vite
+└── package.json      # Dependências do projeto
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com 💙 por Guilherme (https://github.com/gui-alves-oliveira) 🚀
